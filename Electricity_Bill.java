@@ -1,24 +1,22 @@
 import java.util.Scanner;
-public class Sample
+public class Solution
 {
-    public static float findTotalBill(int units)
+    public static float totbill(int units)
     {
         float amt;
         if(units<200)
-            amt=units*1.20f;
+        amt=units*1.20f;
         else if(units>=200 && units<400)
-            amt=units*1.50f;
+        amt=units*1.50f;
         else if(units>=400 && units<600)
-            amt=units*1.80f;
+        amt=units*1.80f;
         else
-            amt=units*2.00f;
-        
+        amt=units*2.00f;
         if(amt>400)
-            amt=amt+0.15f*amt;
+        amt=amt+0.15f*amt;
         else
-            amt=amt+100;
-       return amt;
-          
+        amt=amt+100;
+        return amt;
     }
     public static void main(String args[])
     {
@@ -29,9 +27,7 @@ public class Sample
         cust_id=sc.nextLine();
         name=sc.nextLine();
         units=sc.nextInt();
-        
-        bill=Sample.findTotalBill(units);    
+        bill=Solution.totbill(units);
         System.out.format("%.2f",bill);
-        sc.close();
     }
 }
